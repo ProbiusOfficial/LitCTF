@@ -30,7 +30,7 @@ class MathQuizHandler(socketserver.BaseRequestHandler):
     def handle(self):
         self.request.sendall(WELCOME_MESSAGE.encode())
         num_correct = 0
-        while num_correct < 100:
+        while num_correct < 2:
             a, b = random.randint(1, 100), random.randint(1, 100)
             op = random.choice(["+", "-"])
             if op == "+":
@@ -38,17 +38,20 @@ class MathQuizHandler(socketserver.BaseRequestHandler):
                 question = f"What is {a} + {b}?\n"
             else:
                 expected_answer = a - b
+                print(expected_answer)
                 question = f"What is {a} - {b}?\n"
             self.request.sendall(question.encode())
             answer = self.request.recv(1024).strip().decode()
-            if answer.isdigit() and int(answer) == expected_answer:
+            print(answer)
+            # if answer.isdigit() and int(answer) == expected_answer:
+            if int(answer) == expected_answer:
                 num_correct += 1
                 self.request.sendall(b"Correct!\n")
             else:
                 self.request.sendall(b"Incorrect. Try again!\n")
                 exit()
                 
-        self.request.sendall(b"Congratulations! Here's your flag:" + flag + "\n")
+        self.request.sendall(b"Congratulations! Here's your flag:" + flag.encode() + b"\n")
 
 if __name__ == "__main__":
     HOST, PORT = "0.0.0.0", 9999
