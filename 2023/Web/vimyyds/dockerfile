@@ -1,0 +1,10 @@
+FROM php:7.2-apache
+
+# LABEL Author="s1rius"
+# LABEL Blog="https://s1rius.space/"
+
+WORKDIR /var/www/html
+COPY . .
+RUN mv start.sh / && chmod +x /start.sh
+
+CMD /start.sh
