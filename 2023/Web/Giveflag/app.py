@@ -30,7 +30,7 @@ def hello():
 @app.route('/flag')
 def flag():
     if session['name'] == 'admin':
-        return f'<h1>{os.getenv()["FLAG"]}</h1>'
+        return f'<h1>{os.getenv("FLAG")}</h1>'
     else:
         return f'<h1>只有管理员才能拿flag耶</h1>'
 if __name__ == '__main__':

@@ -1,7 +1,8 @@
 import os
 import random
 import socketserver
-flag = os.getenv()["FLAG"]
+
+flag = os.getenv("FLAG")
 
 WELCOME_MESSAGE = """
  __           ________      _________   ______       _________   ______    
@@ -47,7 +48,7 @@ class MathQuizHandler(socketserver.BaseRequestHandler):
                 self.request.sendall(b"Incorrect. Try again!\n")
                 exit()
                 
-        self.request.sendall(b"Congratulations! Here's your flag: FLAG{example_flag}\n")
+        self.request.sendall(b"Congratulations! Here's your flag:" + flag + "\n")
 
 if __name__ == "__main__":
     HOST, PORT = "0.0.0.0", 9999

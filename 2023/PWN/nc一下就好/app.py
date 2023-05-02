@@ -1,3 +1,4 @@
+import os
 import subprocess
 import socketserver
 
@@ -28,6 +29,6 @@ class TerminalHandler(socketserver.StreamRequestHandler):
         self.wfile.write(b"Error: " + error.encode() + b"\n")
 
 if __name__ == "__main__":
-    HOST, PORT = "0.0.0.0", 1337
+    HOST, PORT = "0.0.0.0", 9999
     server = socketserver.ThreadingTCPServer((HOST, PORT), TerminalHandler)
     server.serve_forever()

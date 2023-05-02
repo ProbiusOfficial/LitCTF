@@ -6,5 +6,5 @@ ENV FLAG=NSSCTF{123456}
 
 WORKDIR /app
 RUN pip install flask
-EXPOSE 9999
+EXPOSE 5000
 CMD ["python", "app.py"]
