@@ -80,12 +80,13 @@ def check():
 
     TLE_case = TLE_case[:-2]
     Wrong_case = Wrong_case[:-2]
+    total_score = int(total_score)
     if TLE_case != '' and Wrong_case != '':
-        return jsonify({'code': 206, 'message': f'TLE on test case {TLE_case} and Wrong answer on test case {Wrong_case}', 'score': total_score})
+        return jsonify({'code': 200, 'message': f'TLE on test case {TLE_case} and Wrong answer on test case {Wrong_case}', 'score': total_score})
     elif TLE_case != '':
-        return jsonify({'code': 204, 'message': f'TLE on test case {TLE_case}', 'score': total_score})
+        return jsonify({'code': 200, 'message': f'TLE on test case {TLE_case}', 'score': total_score})
     elif Wrong_case != '':
-        return jsonify({'code': 205, 'message': f'Wrong answer on test case {Wrong_case}', 'score': total_score})
+        return jsonify({'code': 200, 'message': f'Wrong answer on test case {Wrong_case}', 'score': total_score})
     else:
         return jsonify({'code': 200, 'message': 'All test cases passed', 'score': total_score})
 

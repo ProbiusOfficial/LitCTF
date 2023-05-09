@@ -11,7 +11,7 @@ function getClientIP(){
      }else if (array_key_exists('HTTP_CLIENT_IP', $_SERVER)) {
             return $_SERVER["HTTP_CLIENT_IP"]; 
      }else if  (array_key_exists('HTTP_USER_AGENT', $_SERVER)) {
-       return $_SERVER['HTTP_USER_AGENT']
+       return $_SERVER['HTTP_USER_AGENT'];
      } 
      return '';
 }
@@ -29,7 +29,7 @@ if($_SERVER['HTTP_REFERER'] != 'j0k3r.com'){
 echo '<h1>请使用官方浏览器 zzuli ，you should know User-Agent is 什么</h1>';
 
 if ($_SERVER['HTTP_USER_AGENT'] != 'zzuli'){
-       die('<h1>You are not use zzuli !</h1>')
+       die('<h1>You are not use zzuli !</h1>');
  }
 
 echo $flag;

@@ -1,0 +1,5 @@
+出题人:6c73d5240a948c86981bc294814d
+某不知名收件人：收到消息attack at dawn
+出题人:xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+某不知名收件人：收到消息Monday or Thur
+已知出题人和收件人手中的密钥相同，请解出出题人第二次发送的密文呢（16进制，字母小写，解得的结果记得要加上LitCTF{}哦。）
