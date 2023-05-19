@@ -6,3 +6,4 @@ LitCTF是由郑州轻工业大学举办的CTF校级比赛，旨在为校内合�
 ## 2023
 
 LitCTF2023 是LitCTF的首届比赛，题目难度较低，适合新手入门。
+官方WriteUp https://dqgom7v7dl.feishu.cn/docx/VyLmdhKDOou5E8xruA7c8bSInKf
